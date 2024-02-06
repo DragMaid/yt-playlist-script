@@ -1,0 +1,5 @@
+#!/bin/sh
+rm ids.txt
+yt-dlp -s --flat-playlist --print-to-file id ids.txt $1
+python yturl.py
+yt-dlp -f 139 -a urls.txt -o "/home/jakekato/Music/%(title)s.%(ext)s"
